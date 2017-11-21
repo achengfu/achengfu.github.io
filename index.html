@@ -6,6 +6,16 @@
 
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="dns-prefetch" href="http://lovefuck.me">
     <title>Fuck me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,135 +32,135 @@
     <link rel="shortcut icon" href="favicon.ico">
     <style type="text/css">
     .text-magic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) skewX(0deg);
-    font-size: 64px;
-    font-family: Raleway, Verdana, Arial, sans-serif;
-    animation: skewX 5s ease-in infinite;
-}
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) skewX(0deg);
+        font-size: 64px;
+        font-family: Raleway, Verdana, Arial, sans-serif;
+        animation: skewX 5s ease-in infinite;
+    }
 
-.white {
-    position: absolute;
-    left: 0;
-    top: 15px;
-    width: 100%;
-    height: 3px;
-    background: #000;
-    z-index: 4;
-    animation: whiteMove 3s ease-out infinite;
-    mix-blend-mode: luminosity;
-}
+    .white {
+        position: absolute;
+        left: 0;
+        top: 15px;
+        width: 100%;
+        height: 3px;
+        background: #000;
+        z-index: 4;
+        animation: whiteMove 3s ease-out infinite;
+        mix-blend-mode: luminosity;
+    }
 
-.text-magic:before {
-    content: attr(data-word);
-    position: absolute;
-    top: 0;
-    left: 1px;
-    height: 0px;
-    color: rgba(255, 0, 0, .9);
-    overflow: hidden;
-    z-index: 2;
-    animation: redShadow 1.5s ease-in infinite;
-    -webkit-filter: contrast(200%);
-    text-shadow: 0.1px 0 0 red;
-    mix-blend-mode: color-burn;
-}
-
-.text-magic:after {
-    content: attr(data-word);
-    position: absolute;
-    top: 0;
-    left: -3px;
-    height: 64px;
-    color: rgba(255, 255, 255, .8);
-    overflow: hidden;
-    z-index: 3;
-    animation: redHeight 2s ease-out infinite;
-    -webkit-filter: contrast(200%);
-    mix-blend-mode: hard-light;
-}
-
-@keyframes redShadow {
-    20% {
-        left: -1px;
-        height: 32px;
-    }
-    60% {
-        left: 2px;
-        height: 6px;
-    }
-    100% {
-        left: -2px;
-        height: 42px;
-    }
-}
-
-@keyframes redHeight {
-    20% {
-        height: 42px;
-    }
-    35% {
-        height: 12px;
-    }
-    50% {
-        height: 40px;
-    }
-    60% {
-        height: 20px;
-    }
-    70% {
-        height: 34px;
-    }
-    80% {
-        height: 22px;
-    }
-    100% {
+    .text-magic:before {
+        content: attr(data-word);
+        position: absolute;
+        top: 0;
+        left: 1px;
         height: 0px;
+        color: rgba(255, 0, 0, .9);
+        overflow: hidden;
+        z-index: 2;
+        animation: redShadow 1.5s ease-in infinite;
+        -webkit-filter: contrast(200%);
+        text-shadow: 0.1px 0 0 red;
+        mix-blend-mode: color-burn;
     }
-}
 
-@keyframes whiteMove {
-    8% {
-        top: 38px;
+    .text-magic:after {
+        content: attr(data-word);
+        position: absolute;
+        top: 0;
+        left: -3px;
+        height: 64px;
+        color: rgba(255, 255, 255, .8);
+        overflow: hidden;
+        z-index: 3;
+        animation: redHeight 2s ease-out infinite;
+        -webkit-filter: contrast(200%);
+        mix-blend-mode: hard-light;
     }
-    10% {
-        top: 8px;
-    }
-    12% {
-        top: 42px;
-    }
-    99% {
-        top: 36px;
-    }
-}
 
-@keyframes skewX {
-    78% {
-        transform: translate(-50%, -50%) skewX(0);
+    @keyframes redShadow {
+        20% {
+            left: -1px;
+            height: 32px;
+        }
+        60% {
+            left: 2px;
+            height: 6px;
+        }
+        100% {
+            left: -2px;
+            height: 42px;
+        }
     }
-    79% {
-        transform: translate(-50%, -50%) skewX(10deg);
+
+    @keyframes redHeight {
+        20% {
+            height: 42px;
+        }
+        35% {
+            height: 12px;
+        }
+        50% {
+            height: 40px;
+        }
+        60% {
+            height: 20px;
+        }
+        70% {
+            height: 34px;
+        }
+        80% {
+            height: 22px;
+        }
+        100% {
+            height: 0px;
+        }
     }
-    80% {
-        transform: translate(-50%, -50%) skewX(-10deg);
+
+    @keyframes whiteMove {
+        8% {
+            top: 38px;
+        }
+        10% {
+            top: 8px;
+        }
+        12% {
+            top: 42px;
+        }
+        99% {
+            top: 36px;
+        }
     }
-    81% {
-        transform: translate(-50%, -50%) skewX(0);
+
+    @keyframes skewX {
+        78% {
+            transform: translate(-50%, -50%) skewX(0);
+        }
+        79% {
+            transform: translate(-50%, -50%) skewX(10deg);
+        }
+        80% {
+            transform: translate(-50%, -50%) skewX(-10deg);
+        }
+        81% {
+            transform: translate(-50%, -50%) skewX(0);
+        }
     }
-}
     </style>
     <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
-      <hgroup class="text-magic" data-word="Fuck Me">
+    <hgroup class="text-magic" data-word="Fuck Me">
         Fuck Me
         <div class="white"></div>
     </hgroup>
     <canvas></canvas>
-    <script  src="js/index.js"></script>
+    <script src="js/index.js"></script>
     <div style="display:none">
         <script type="text/javascript">
         var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
