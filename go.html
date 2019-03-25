@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>下班倒计时</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
     <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/localStorage/2.0.1/localStorage.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
     <style>
         h1{
@@ -42,7 +44,7 @@
                 minutes: "",
                 seconds: "",
                 endTime: "2018/05/31 19:00:00",
-                endText: "我宣布：“下班！走人！”",
+                endText: "“下什么班，单身狗，加班吧”",
                 hourtime:"19:00:00",
                 prevtime:"19:00:00",
                 expired: false
@@ -88,14 +90,14 @@
                         this.setTime()
                     }else{
                         this.prevtime = this.hourtime;
-                        localStorage.setItem("xbTime",this.hourtime);
+                        window.localStorage.setItem("xbTime",this.hourtime);
                         this.endTime = new Date().toLocaleDateString() + " " + this.hourtime;
                     }
                 }
             },
             beforeMount() {
-                if (localStorage.getItem("xbTime") && localStorage.getItem("xbTime")!=null) {
-                    this.endTime = new Date().toLocaleDateString() + " " + localStorage.getItem("xbTime");
+                if (window.localStorage.getItem("xbTime") && window.localStorage.getItem("xbTime")!=null) {
+                    this.endTime = new Date().toLocaleDateString() + " " + window.localStorage.getItem("xbTime");
                 } else {
                     this.hourtime = prompt("输入下班时间，如下： ", "19:00:00");
                     if(this.hourtime===null){
@@ -103,7 +105,7 @@
                         this.setTime()
                     }
                     this.prevtime = this.hourtime;
-                    localStorage.setItem("xbTime",this.hourtime);
+                    window.localStorage.setItem("xbTime",this.hourtime);
                     this.endTime = new Date().toLocaleDateString() + " " + this.hourtime;
                 }
             }
